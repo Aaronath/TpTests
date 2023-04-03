@@ -29,11 +29,17 @@ public class FrmMenu extends JFrame{
 
 
         // A compléter ici
+        mdl = new ModelJTable();
+        mdl.loadDatasCaptage(mesCaptages);
+
+
+
+        tblCaptages.setModel(mdl);
     }
 
     public void LoadDatas()
     {
-        /*
+
         Captage cap1 = new Captage(3,"Captage du bois du pin", 23, 500);
         Captage cap2 = new Captage(5,"Captage du lac", 37, 780);
         Forage for1 = new Forage(1,"Forage de l'enfer", 17, 56, 6);
@@ -43,6 +49,6 @@ public class FrmMenu extends JFrame{
         mesCaptages.add(cap1);mesCaptages.add(cap2);
         mesCaptages.add(for1);mesCaptages.add(for2);
         mesCaptages.add(cuve1);mesCaptages.add(cuve2);
-        */
+         System.out.println(for1.GetVolume());
     }
 }
