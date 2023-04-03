@@ -80,10 +80,15 @@ class FormationTest
     void beneficeFormation()
     {
         // Cas n°1 : On ajoute les 2 premiers participants à la formation
-
+        formation.AjouterParticipant(participant1);
+        formation.AjouterParticipant(participant2);
+        assertEquals(150 - 90*1.89, formation.BeneficeFormation());
 
         // Cas n°2 : on ajoute le reste des participants
-
+        formation.AjouterParticipant(participant3);
+        formation.AjouterParticipant(participant4);
+        formation.AjouterParticipant(participant5);
+        assertEquals(150*3 - 235*1.89, formation.BeneficeFormation());
 
     }
 }
